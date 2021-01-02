@@ -1,23 +1,23 @@
 all:
 	mex -O fst_accumulate.c
-	mex -O fst_addvec.c
-	mex -O fst_dgemm.c
-	mex -O fst_diagmul.c
-	mex -O fst_dspamm.c
-	mex -O fst_dspammt2.c
-	mex -O fst_dspammt.c
-	mex -O fst_dsymm.c
-	mex -O fst_dsyrk.c
-	mex -O fst_dtrmm.c
-	mex -O fst_dtrsm.c
-	mex -O fst_flipdims.c
-	mex -O fst_getsparse.c
-	mex -O fst_invchol.c
-	mex -O fst_muldiag.c
-	mex -O fst_permute.c
-	mex -O fst_reshape.c
-	mex -O fst_sumpos.c
-	mex -O save_sparse.c
+	mex -O fst_addvec.c -lblas
+	mex -O fst_dgemm.c -lblas
+	mex -O fst_diagmul.c -lblas
+	mex -O fst_dspamm.c -lblas
+	mex -O fst_dspammt2.c -lblas
+	mex -O fst_dspammt.c -lblas
+	mex -O fst_dsymm.c -lblas
+	mex -O fst_dsyrk.c -lblas
+	mex -O fst_dtrmm.c -lblas
+	mex -O fst_dtrsm.c -lblas
+	mex -O fst_flipdims.c -lblas
+	mex -O fst_getsparse.c -lblas
+	mex -O fst_invchol.c -llapack
+	mex -O fst_muldiag.c -lblas
+	mex -O fst_permute.c -lblas
+	mex -O fst_reshape.c -lblas
+	mex -O fst_sumpos.c -lblas
+	mex -O save_sparse.c -lblas
 
 clean:
 	rm -f *.o *.mexglx *~ \#*
